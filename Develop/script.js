@@ -4,13 +4,15 @@ var lowerCase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'
 var upperCase = ['A', 'B', 'C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
 var numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 var specialCharacters = ['!', '#', '$', '%', '&', '(', ')','*','+','-','.','/',':',';','<','=','>','?','@','[','\\',']','^','`','{','|','}','~'];
+
+var password = "";
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
 
-  var password = passwordCriteria();
+  passwordCriteria();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -18,7 +20,6 @@ function writePassword() {
 }
 
 var generatePassword = function(passwordLength, includeLowercase, includeUppercase, includeNumbers, includeSpecialCharacters) {
-  var password = "";
 
   if (includeLowercase == true) {
     char = char.concat(lowerCase);
@@ -36,10 +37,14 @@ var generatePassword = function(passwordLength, includeLowercase, includeUpperca
     char = char.concat(specialCharacters);
   };
 
-
-
+  for (var i=0; i < passwordLength; i++) {
+    password = password + char[Math.floor(Math.random() * (char.length + 1))];
+  };
+  
+  console.log(password);
   console.log(passwordLength, includeLowercase, includeUppercase, includeNumbers, includeSpecialCharacters);
   console.log(char);
+  return password;
 }
 
 var passwordCriteria = function() {

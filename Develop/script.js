@@ -20,6 +20,7 @@ function writePassword() {
 }
 
 var generatePassword = function(passwordLength, includeLowercase, includeUppercase, includeNumbers, includeSpecialCharacters) {
+  password = "";
 
   if (includeLowercase == true) {
     char = char.concat(lowerCase);

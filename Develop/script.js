@@ -21,19 +21,19 @@ var generatePassword = function(passwordLength, includeLowercase, includeUpperca
   var password = "";
 
   if (includeLowercase == true) {
-    char.concat(lowerCase);
+    char = char.concat(lowerCase);
   };
 
   if (includeUppercase == true) {
-    char.concat;
+    char = char.concat(upperCase);
   };
 
   if (includeNumbers == true) {
-    char.splice(52, 62);
+    char = char.concat(numbers);
   };
 
   if (includeSpecialCharacters == true) {
-    char.slice(62, char.length);
+    char = char.concat(specialCharacters);
   };
 
 

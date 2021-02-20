@@ -37,6 +37,7 @@ var generatePassword = function(passwordLength, includeLowercase, includeUpperca
   };
 
 
+
   console.log(passwordLength, includeLowercase, includeUppercase, includeNumbers, includeSpecialCharacters);
   console.log(char);
 }
@@ -51,7 +52,12 @@ var passwordCriteria = function() {
     var includeNumbers = confirm("Include numbers?\nClick 'Ok' for Yes.\nClick 'Cancel' for No.");
     var includeSpecialCharacters = confirm("Include special characters?\nClick 'Ok' for Yes.\nClick 'Cancel' for No.");
 
-    generatePassword(passwordLength, includeLowercase, includeUppercase, includeNumbers, includeSpecialCharacters);
+    if (!includeLowercase && !includeUppercase && !includeNumbers && !includeSpecialCharacters) {
+      alert("Well you have to choose something! Try again.");
+      passwordCriteria();
+    } else {
+      generatePassword(passwordLength, includeLowercase, includeUppercase, includeNumbers, includeSpecialCharacters);
+    }
   }
   else {
     alert("Invalid choice. Please try again.")

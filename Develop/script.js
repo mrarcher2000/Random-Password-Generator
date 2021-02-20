@@ -39,7 +39,7 @@ var generatePassword = function(passwordLength, includeLowercase, includeUpperca
   };
 
   for (var i=0; i < passwordLength; i++) {
-    password = password + char[Math.floor(Math.random() * (char.length + 1))];
+    password = password + char[Math.floor(Math.random() * (char.length))];
   };
   
   console.log(password);

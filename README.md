@@ -24,7 +24,7 @@ The Random Password Generator is very easy to use. To begin, click on the button
 
 The prompts will ask for the user to click either 'OK' or 'Cancel' for each type of character as well as how long to make the password. Once the user finishes the prompts that appear, a random password will be generated in the HTML block labeled "Your Secure Password". Upon clicking the button again, the prompts will reappear again and a new password will be generated in its place.
 
-![Random Password Generator](\images\Screenshot 2021-02-21 201302.png)
+![Random Password Generator](/images/Screenshot 2021-02-21 201302.png)
 
 ## Credits
 
